@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/teslatitle" />
+
+            <ImageView
+                android:id="@+id/logo2"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="90dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/logotesla" />
+
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <EditText
+                    android:id="@+id/User"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombre_de_usuario"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/Contrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contrase_a"
+                    android:textColor="@color/colorTextoNegro"
+                    android:inputType="textPassword" />
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="sans-serif-black"
+                    android:onClick="login"
+                    android:text="LOGIN"
+                    android:textColor="@color/colorPrimary"
+                    android:theme="@style/TransparenciaBoton"
+                    app:cornerRadius="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/PreguntaCuenta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No tienes cuenta?"
+                        android:textColor="@color/colorTextoNegro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toEndOf="@id/PreguntaCuenta"
+                        android:layout_toRightOf="@id/PreguntaCuenta"
+                        android:clickable="true"
+                        android:onClick="crearCuenta"
+                        android:text="Crea cuenta aca"
+                        android:textColor="@color/colorTextoNegro"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

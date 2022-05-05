@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SplashAnimacion</string>
+    <string name="nombre_de_usuario" >Nombre de Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+
+
+</resources>
